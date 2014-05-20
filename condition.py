@@ -10,5 +10,9 @@ elif len(sys.argv) > 2:
     exit('TOO MANY ARGs')
 else:
     print ("You have Supplied ",len(sys.argv),"ARGs")
-    exit()
+    #pass keeps the functions/script going without doing any thing
+    pass
+    #help('pass')
+    #exit()
+    print("You have Passed")
 
