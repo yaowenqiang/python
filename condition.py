@@ -1,5 +1,6 @@
 # sys is required to access 'argv'
 import sys
+#import sys,re
 # Perform check of number of supplied position parameters
 #assign length of sys.argv to simple var
 leng1 = len(sys.argv)
@@ -16,5 +17,11 @@ else:
     pass
     #help('pass')
     #exit()
-    print("You have Passed")
-
+    import re
+    if re.search('^\d{1,4}$',sys.argv[1]):
+        print('MATCH')
+    else:
+        print('NO MATCH')
+        exit(200)
+    #Perform sanity check on sys.argv[1]
+    print ('You have Passed')
