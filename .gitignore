@@ -216,3 +216,5 @@ pip-log.txt
 
 #local directory
 .ropeproject/
+#Pycharm config directory
+.idea/

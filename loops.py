@@ -1,3 +1,5 @@
+#Required fo File I/O access
+#import os
 fname = 'jack'
 #for i in fname:
     #print(i)
@@ -14,9 +16,16 @@ for i,j in enumerate(fname):
 for i in fname:
     print(i)
 else:
-    print 'loop finished'
+    print('loop finished')
 world_leaders = {'UK':'David Cameron','Germany':'Angela Merkl'}
 for i,j in world_leaders.items():
     print(i,j)
 else:
     print('finished')
+f0 = "G8_leaders"
+f1 = open(f0)
+for i in f1:
+    #print(i,end=' ')
+    print(i)
+else:
+    print('FINISHED WITH DOCUMENTS',f0)
