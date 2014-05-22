@@ -29,3 +29,17 @@ for i in f1:
     print(i)
 else:
     print('FINISHED WITH DOCUMENTS',f0)
+
+#While loop
+count = 0
+while count < 10:
+    print("Count:",count)
+    if count == 6:
+        print("CURRENT VALUE is",count,"We will break the loop")
+        break
+    count += 1
+else:
+    print("WHILE LOOP OVER")
+full_name = 'jack','yao'
+for i in full_name:
+    print(i)
