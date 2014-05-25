@@ -34,5 +34,8 @@ for root,dirs,files in os.walk(s,topdown=True,onerror=None,followlinks=True):
         u = d + "/" + p
         print("FINA PATH:",u)
 
-        #Create DST tree
-        os.makedirs(u)
+        try:
+            #Create DST tree
+            os.makedirs(u)
+        except IOError as err:
+            print("ERROR GENERATING DST TREE",err)
