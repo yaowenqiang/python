@@ -37,5 +37,5 @@ for root,dirs,files in os.walk(s,topdown=True,onerror=None,followlinks=True):
         try:
             #Create DST tree
             os.makedirs(u)
-        except IOError as err:
+        except OSError as err:
             print("ERROR GENERATING DST TREE",err)
