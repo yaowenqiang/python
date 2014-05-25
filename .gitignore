@@ -218,3 +218,6 @@ pip-log.txt
 .ropeproject/
 #Pycharm config directory
 .idea/
+.bak
+movs/
+movs2/
