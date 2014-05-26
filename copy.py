@@ -1,8 +1,9 @@
 import pyperclip,sys,re
-content = pyperclip.paste()
-n = sys.argv[1]
+content =str(pyperclip.paste())
+n = int(sys.argv[1])-1
 p = re.compile(r'\d+')
-l = p.findall(content)
-r = l[n]
-print(r)
-
+i = p.findall(content)
+print(i)
+r = i[n]
+paste = "http://huodong.duomi.com/songtaste/?songid="+r
+pyperclip.copy(paste)
