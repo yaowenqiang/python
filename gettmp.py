@@ -4,6 +4,7 @@ try:
     #Execute Process
     #output = Popen(['pcsensor',"-c"],stdout=PIPE).communicate()[0]
     output = Popen(['uptime'],stdout=PIPE).communicate()[0]
+    output = output.strip()
     print(output)
     #Parse results with RegEx
     p = re.compile(r'\s+')
@@ -14,6 +15,8 @@ try:
     d = s[0]
     t = s[1]
     tmp = s[3]
+    #strip Trailing tem value (f|c)
+    tmp2 = tmp[:-1]
     print("DATE: ",d," TIME: ",t," TEMPERATURE: ",tmp)
 except OSError as err1:
     print(err1)
