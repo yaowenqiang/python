@@ -1,4 +1,4 @@
-import pyperclip,sys,re,webbrowser
+import pyperclip,sys,os,re,webbrowser
 filename = 'clipboard.txt'
 f1 = open(filename,'r')
 
@@ -11,8 +11,21 @@ if content == '':
 n = int(sys.argv[1])-1
 p = re.compile(r'\d+')
 i = p.findall(content)
-print(i)
+#print(i)
 r = i[n]
 paste = "http://huodong.duomi.com/songtaste/?songid="+r
 pyperclip.copy(paste)
-webbrowser.open("baidu.com")
+#webbrowser.open("baidu.com")
+os.startfile(paste)
+#TODO make it corss-platform
+#TODO fix open twice bug
+#if sys.platform=='win32':
+#    os.startfile(url)
+#elif sys.platform=='darwin':
+#    subprocess.Popen(['open', url])
+#else:
+#    try:
+#        subprocess.Popen(['xdg-open', url])
+#    except OSError:
+#        print 'Please open a browser on: '+url
+#http://stackoverflow.com/questions/4216985/python-call-to-operating-system-to-open-url
